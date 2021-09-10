@@ -1,0 +1,50 @@
+package projetodiasvividos;
+
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class DiasVividos {
+
+	public static void main(String[] args) {		
+		// Cria e inicializa as variáveis
+		String nome="";
+		int idade = 0;
+		int diasVividos = 0;
+		// Entrada de dados
+		nome = JOptionPane.showInputDialog("Informe o nome: ","");
+		idade = Integer.parseInt(JOptionPane.showInputDialog("Informe a idade: ", ""));
+		
+		diasVividos = idade * 365;
+		// null => owner (proprietário)
+		// 2o. parâmetro => mensagem para o usuário
+		// 3o. parâmetro => Título da janela
+		// 4o. parâmetro => ícone com a letra "I" de informação
+		JOptionPane.showMessageDialog(null, 
+				nome+", você viveu aproximadamente "+diasVividos+" dias",
+				"MENSAGEM DO PROGRAMA",
+				JOptionPane.INFORMATION_MESSAGE);
+		
+		JTextArea saida = new JTextArea(8,20);
+		JScrollPane scroll = new JScrollPane(saida);
+		
+		saida.append("INFORMAÇÕES DO PROGRAMA\n");
+		saida.append("-----------------------\n");
+		saida.append("\n")
+		saida.append("Este programa calcula a\n");
+		saida.append("quantidade aproximada de\n");
+		saida.append("dias vividos.\n");
+		saida.append("Nome: "+nome+"\n");
+		saida.append("Idade: "+idade+"\n");
+		saida.append("Dias Vividos: "+diasVividos+"\n");
+		saida.append("-----------------------\n");
+		
+		JOptionPane.showMessageDialog(null,
+				saida, "MENSAGEM DO PROGRAMA",
+				JOptionPane.INFORMATION_MESSAGE);
+		
+		System.out.println("Programa Finalizado . . .");
+		
+	}
+
+}
