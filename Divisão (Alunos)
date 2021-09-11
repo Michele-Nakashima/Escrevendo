@@ -1,0 +1,40 @@
+
+package projetodivisao;
+import java.util.Scanner;
+public class ProjetoDivisao {
+   
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    // criar as variaveis do programa
+    double nota1=0, nota2=0;
+    // criar a variavel media, pois facilitará
+    // a manutenção no programa
+    double media = 0;
+    
+    // Inserindo os dados
+    System.out.println("Informe a nota 1: ");
+    nota1 = sc.nextDouble();
+    
+    System.out.println("Informe a nota 2: ");
+    nota2 = sc.nextDouble();
+    
+    //Calculando a média
+    media = (nota1+nota2)/2;
+    
+    System.out.println("A média é: "+String.format("%.2f",media));
+    
+    //Fechar o programa com o If , explicando que a media
+    //tem que ser maior que 7... usa o sinal >=7
+    
+    if (media >= 7)
+        System.out.println("Aprovado! Parabéns pelo seu esforço");
+    
+    //E se a soma for menor que 7, colocar apenas
+    // "else" que ele automaticamente posiciona o valor
+    else
+            System.out.println("Reprovado! Faça a prova complementar.");
+            
+    
+    }
+    
+}
