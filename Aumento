@@ -1,0 +1,31 @@
+
+package aumento;
+
+import java.util.Scanner;
+
+public class Aumento {
+
+    public static void main(String[] args) {
+    //Variáveis: salário e aumento
+ 
+    //O que você deve fazer? Mostrar o novo 
+    // salário... 
+    // Aumento = salario*10/100
+    
+    Scanner entrada = new Scanner(System.in);
+    float salario=0, aumento=0, salarioNovo=0;
+    
+    System.out.println("Digite o salário: ");
+    salario = entrada.nextFloat();
+    
+    //Processsamento: salario*10/100 
+    aumento = salario*10/100;
+    salarioNovo=salario+aumento;
+    
+    //Saída
+    System.out.printf("O salário novo é %.2f \n", salarioNovo);
+    
+            
+    }
+    
+}
