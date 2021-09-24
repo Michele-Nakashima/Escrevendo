@@ -1,0 +1,19 @@
+package repeticao;
+
+public class Repeticao {
+
+	public static void main(String[] args) {
+		int contador=1;
+		int soma=0;
+		do {			
+			System.out.println(contador);
+			
+                        soma = soma + contador;
+			contador = contador + 1;
+			
+			
+		} while(contador <=10);
+		System.out.println("----------");
+		System.out.println("A soma é: "+soma);
+	}
+}
